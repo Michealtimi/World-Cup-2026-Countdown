@@ -36,9 +36,9 @@ export default function Home() {
 			<JsonLdSchemas />
 			<Navbar />
 			<main className='w-full'>
-				{/* Hero + Countdown visually stacked, backgrounds kept */}
+				{/* Unified Hero + Countdown Section */}
 				<section
-					className='relative w-full min-h-[600px] sm:min-h-[700px] md:min-h-[800px] flex flex-col items-center justify-end overflow-hidden pb-0'
+					className='relative w-full min-h-[700px] md:min-h-[800px] flex flex-col items-center justify-center overflow-hidden pb-0'
 					style={{
 						backgroundImage: 'url(/worldcup-2026-hero.jpg)',
 						backgroundSize: 'cover',
@@ -49,32 +49,24 @@ export default function Home() {
 					{/* Dark Overlay */}
 					<div className='absolute inset-0 bg-black/55 dark:bg-black/65' />
 
-					{/* Content */}
-					<div className='relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 md:pt-24 pb-8 sm:pb-10 md:pb-12'>
+					{/* Unified Content */}
+					<div className='relative z-10 flex flex-col items-center justify-center text-center text-white px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 md:pt-24 pb-8 sm:pb-10 md:pb-12'>
 						<h1 className='text-5xl sm:text-6xl md:text-7xl font-black mb-4 tracking-tight drop-shadow-lg'>
 							World Cup 2026
 						</h1>
-						<p className='text-xl sm:text-2xl md:text-3xl font-bold mb-6 drop-shadow-md'>
+						<p className='text-xl sm:text-2xl md:text-3xl font-bold mb-4 drop-shadow-md'>
 							48 Teams • 3 Nations • Infinite Possibilities
 						</p>
-						<p className='text-base sm:text-lg md:text-xl text-gray-200 drop-shadow-md mb-8'>
+						<p className='text-base sm:text-lg md:text-xl text-gray-200 drop-shadow-md mb-6'>
 							June 11 – July 19, 2026
 						</p>
-					</div>
-				</section>
-
-				{/* Countdown Timer Section visually overlaps/attaches to hero, backgrounds kept */}
-				<section className='w-full bg-gradient-to-b from-slate-900 to-slate-950 pt-0 pb-12 sm:pb-16 md:pb-20 -mt-8 sm:-mt-10 md:-mt-12'>
-					<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-						<div className='text-center mb-12 sm:mb-16'>
-							<h2 className='text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2'>
-								Countdown to Kickoff
-							</h2>
-							<p className='text-gray-300 text-sm sm:text-base'>
-								Opening Match: Mexico vs South Africa at Estadio
-								Azteca
-							</p>
-						</div>
+						<h2 className='text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 mt-2'>
+							Countdown to Kickoff
+						</h2>
+						<p className='text-gray-300 text-sm sm:text-base mb-6'>
+							Opening Match: Mexico vs South Africa at Estadio
+							Azteca
+						</p>
 						<CountdownTimer />
 					</div>
 				</section>
@@ -83,6 +75,94 @@ export default function Home() {
 				<section className='w-full bg-white dark:bg-slate-950 py-12 sm:py-16 md:py-20'>
 					<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 						<TicketPhaseCard />
+					</div>
+				</section>
+
+				{/* SEO Content Section for AdSense */}
+				<section className='w-full bg-white dark:bg-slate-950 py-12 sm:py-16 md:py-20'>
+					<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+						<h2 className='text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6'>
+							World Cup 2026: The Ultimate Guide to the
+							Tournament, Tickets, and Global Impact
+						</h2>
+						<p className='text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-8'>
+							The FIFA World Cup 2026 is set to be the most
+							expansive and inclusive tournament in football
+							history, featuring 48 teams across three host
+							nations: the United States, Canada, and Mexico. This
+							historic event marks the first time the World Cup
+							will be co-hosted by three countries, promising a
+							celebration of global unity, sporting excellence,
+							and cultural diversity. With the tournament
+							scheduled from June 11 to July 19, 2026, fans
+							worldwide are preparing for a month-long spectacle
+							that will redefine the landscape of international
+							football.
+						</p>
+						<p className='text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-8'>
+							The expanded format introduces new dynamics, with 48
+							teams competing in 80 matches across 12 iconic
+							stadiums. The opening match at Estadio Azteca in
+							Mexico City will see Mexico face South Africa,
+							setting the stage for a tournament filled with
+							unforgettable moments. The final, hosted at MetLife
+							Stadium in New Jersey, will crown the world’s best
+							team in front of over 82,000 spectators. Fans can
+							expect thrilling group stages, intense knockout
+							rounds, and a showcase of football’s rising stars
+							and legendary veterans.
+						</p>
+						<p className='text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-8'>
+							Ticketing for World Cup 2026 is a major focus, with
+							FIFA implementing a Random Selection Draw and a
+							regulated Resale Marketplace to ensure fair access.
+							Registration periods allow fans to enter lotteries
+							for popular matches, while the Resale Marketplace
+							opens in April 2026, providing opportunities to
+							purchase remaining tickets at capped prices. This
+							system aims to prevent scalping and make the
+							tournament accessible to fans from all backgrounds.
+						</p>
+						<p className='text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-8'>
+							The World Cup’s impact extends beyond the pitch.
+							Host cities across North America are preparing for a
+							surge in tourism, economic activity, and cultural
+							exchange. The tournament is expected to generate
+							billions in revenue, create thousands of jobs, and
+							foster lasting legacies in infrastructure and
+							community development. From the vibrant streets of
+							Mexico City to the bustling avenues of New York, the
+							World Cup will unite fans and nations in a shared
+							celebration of sport and humanity.
+						</p>
+						<p className='text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-8'>
+							For those seeking information, this hub provides
+							comprehensive details on tournament schedules,
+							ticket phases, stadiums, and frequently asked
+							questions. Whether you’re a seasoned football
+							enthusiast or a newcomer to the sport, the World Cup
+							2026 offers something for everyone. Stay updated
+							with live match hubs, ticket alerts, and expert
+							insights as the countdown to kickoff continues.
+						</p>
+						<p className='text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-8'>
+							The legacy of World Cup 2026 will be measured not
+							only in goals and trophies but in the connections
+							forged between people and cultures. As the world’s
+							eyes turn to North America, the tournament stands as
+							a beacon of hope, excitement, and possibility. Join
+							millions of fans in celebrating the beautiful game,
+							and experience the magic of football’s greatest
+							stage.
+						</p>
+						<p className='text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-8'>
+							Plan your journey, secure your tickets, and immerse
+							yourself in the World Cup 2026 experience. From the
+							opening ceremony to the final whistle, this
+							tournament promises to deliver memories that will
+							last a lifetime. Welcome to the future of
+							football—welcome to World Cup 2026.
+						</p>
 					</div>
 				</section>
 

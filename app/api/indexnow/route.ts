@@ -1,63 +1,38 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
-// IndexNow API endpoint for rapid search engine indexing
-// Documentation: https://www.indexnow.org/
+export async function GET() {
+  const host = "worldcup2026.example.com"; // Replace with your actual domain if needed
+  const key = "4798c91016c0443f966866725d5f3203";
+  const keyLocation = `https://${host}/4798c91016c0443f966866725d5f3203.txt`;
+  const urlList = [
+    `https://${host}/`,
+    `https://${host}/tickets`,
+    // Add other main pages as needed
+  ];
 
-const INDEX_NOW_HOST = 'https://api.indexnow.org/indexnow';
-const INDEXNOW_KEY = process.env.INDEXNOW_KEY || 'abc123key'; // Set in environment variables
-const SITE_HOST = 'worldcup2026.example.com';
-const KEY_LOCATION = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://worldcup2026.example.com'}/indexnow-key.txt`;
+  const payload = {
+    host,
+    key,
+    keyLocation,
+    urlList,
+  };
 
-export async function POST(request: NextRequest) {
   try {
-    const { url } = await request.json();
-
-    if (!url) {
-      return NextResponse.json(
-        { error: 'URL parameter is required' },
-        { status: 400 }
-      );
-    }
-
-    // Validate URL format
-    try {
-      new URL(url);
-    } catch {
-      return NextResponse.json(
-        { error: 'Invalid URL format' },
-        { status: 400 }
-      );
-    }
-
-    // Prepare IndexNow payload
-    const payload = {
-      host: SITE_HOST,
-      key: INDEXNOW_KEY,
-      keyLocation: KEY_LOCATION,
-      urlList: [url],
-    };
-
-    // Send to IndexNow API
-    const response = await fetch(INDEX_NOW_HOST, {
+    const response = await fetch('https://api.indexnow.org/indexnow', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json; charset=utf-8' },
       body: JSON.stringify(payload),
     });
 
-    if (response.status === 200) {
-      return NextResponse.json(
-        {
-          success: true,
-          message: `URL ${url} submitted to IndexNow successfully`,
-        },
-        { status: 200 }
-      );
+    if (response.ok) {
+      return NextResponse.json({ message: "Signal Sent Successfully! 🚀" });
     } else {
-      return NextResponse.json(
-        {
-          success: false,
+      return NextResponse.json({ message: "Signal Failed", status: response.status }, { status: 400 });
+    }
+  } catch (error) {
+    return NextResponse.json({ error: "Network Error" }, { status: 500 });
+  }
+}
           message: `IndexNow API returned status ${response.status}`,
         },
         { status: response.status }

@@ -13,7 +13,7 @@ const FlipCard = ({
 }) => {
 	// Only animate when shouldFlip is true
 	return (
-		<div className='relative flip-container w-[120px] h-[180px] bg-black/80 rounded-2xl overflow-hidden font-bold font-sans shadow-xl'>
+		<div className='relative flip-container w-20 h-30 sm:w-25 sm:h-[150px] md:w-30 md:h-45 bg-black/80 rounded-2xl overflow-hidden font-bold font-sans shadow-xl'>
 			{/* 1. TOP STATIC (next number's top half) */}
 			<div className='absolute inset-0 flex flex-col pointer-events-none'>
 				<div className='h-1/2 w-full bg-[#1a1a1a] rounded-t-md flex items-end justify-center overflow-hidden relative'>
@@ -21,7 +21,7 @@ const FlipCard = ({
 						{next}
 					</span>
 					{/* Single thin divider line */}
-					<div className='absolute bottom-0 left-0 w-full h-[1px] bg-black/60 z-10' />
+					   <div className='absolute bottom-0 left-0 w-full h-px bg-black/60 z-10' />
 				</div>
 				{/* 2. BOTTOM STATIC (current number's bottom half) */}
 				<div className='h-1/2 w-full bg-[#181818] rounded-b-md flex items-start justify-center overflow-hidden relative shadow-inner'>
@@ -78,8 +78,8 @@ const UnitGroup = ({
 	prevValue: string;
 	flip: boolean[];
 }) => (
-	<div className='flex flex-col items-center'>
-		<div className='flex gap-[16px]'>
+	   <div className='flex flex-col items-center'>
+		   <div className='flex gap-4'>
 			{value.split('').map((digit, i) => (
 				<FlipCard
 					key={i}
@@ -174,14 +174,14 @@ export function CountdownTimer() {
 		return () => clearInterval(interval);
 	}, [prevTime, timeLeft]);
 
-	return (
-		<div className='relative flex items-center justify-center w-full min-h-[320px]'>
+	   return (
+		   <div className='relative flex items-center justify-center w-full min-h-80'>
 			{/* Semi-transparent white background, full width */}
 			<div className='absolute inset-0 flex items-center justify-center pointer-events-none'>
-				<div className='bg-black/80 rounded-2xl w-full h-full min-h-[320px]' />
+				   <div className='bg-black/80 rounded-2xl w-full h-full min-h-80' />
 			</div>
 			{/* Timer content */}
-			<div className='relative z-10 flex items-start gap-[48px] justify-center w-full flex-wrap py-8 px-4 sm:px-8'>
+			   <div className='relative z-10 flex items-start gap-12 justify-center w-full flex-wrap py-8 px-4 sm:px-8'>
 				<UnitGroup
 					label='Days'
 					value={timeLeft.days}

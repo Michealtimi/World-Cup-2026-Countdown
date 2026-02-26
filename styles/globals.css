@@ -8,13 +8,13 @@
 }
 @layer components {
 	.flip-card {
-		@apply relative inline-flex flex-col items-center justify-center text-[40px] md:text-[64px] font-extrabold leading-none text-rose-100 mx-2;
+		@apply relative inline-flex flex-col items-center justify-center text-[32px] sm:text-[40px] md:text-[64px] font-extrabold leading-none text-rose-100 mx-2;
 		perspective: 1000px;
 		font-family: 'Montserrat', 'Poppins', 'Inter', sans-serif;
 		letter-spacing: 0.1em;
 	}
 	.flip-half {
-		@apply overflow-hidden bg-[#0a0a0a] w-[56px] h-[56px] md:w-[96px] md:h-[96px] flex justify-center items-center;
+		@apply overflow-hidden bg-[#0a0a0a] w-[40px] h-[40px] sm:w-[56px] sm:h-[56px] md:w-[96px] md:h-[96px] flex justify-center items-center;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	}
 	.flip-top {

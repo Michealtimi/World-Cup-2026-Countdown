@@ -1,5 +1,4 @@
 import { CountdownTimer } from '@/components/countdown-timer';
-import { TicketPhaseCard } from '@/components/ticket-phase-card';
 import { Navbar } from '@/components/navbar';
 import { JsonLdSchemas } from '@/components/json-ld-schemas';
 import {
@@ -38,7 +37,7 @@ export default function Home() {
 			<main className='w-full'>
 				{/* Unified Hero + Countdown Section */}
 				<section
-					className='relative w-full min-h-[700px] md:min-h-[800px] flex flex-col items-center justify-center overflow-hidden pb-0'
+					className='relative w-full min-h-175 md:min-h-200 flex flex-col items-center justify-center overflow-hidden pb-0'
 					style={{
 						backgroundImage: 'url(/worldcup-2026-hero.jpg)',
 						backgroundSize: 'cover',
@@ -71,98 +70,81 @@ export default function Home() {
 					</div>
 				</section>
 
-				{/* Ticket Phase Card Section */}
-				<section className='w-full bg-white dark:bg-slate-950 py-12 sm:py-16 md:py-20'>
-					<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-						<TicketPhaseCard />
+				{/* AdSense Slot - Single Placement after Hero */}
+				<section className='w-full bg-white dark:bg-slate-950 py-6 sm:py-8 md:py-10'>
+					<div className='max-w-3xl mx-auto px-2 sm:px-6 lg:px-8'>
+						<div className='bg-slate-100 dark:bg-slate-900 border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-lg p-6 sm:p-10 text-center'>
+							<p className='text-slate-600 dark:text-slate-400 font-semibold'>
+								AdSense Placeholder
+							</p>
+						</div>
 					</div>
 				</section>
 
-				{/* SEO Content Section for AdSense */}
-				<section className='w-full bg-white dark:bg-slate-950 py-12 sm:py-16 md:py-20'>
-					<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-						<h2 className='text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6'>
-							World Cup 2026: The Ultimate Guide to the
-							Tournament, Tickets, and Global Impact
-						</h2>
-						<p className='text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-8'>
-							The FIFA World Cup 2026 is set to be the most
-							expansive and inclusive tournament in football
-							history, featuring 48 teams across three host
-							nations: the United States, Canada, and Mexico. This
-							historic event marks the first time the World Cup
-							will be co-hosted by three countries, promising a
-							celebration of global unity, sporting excellence,
-							and cultural diversity. With the tournament
-							scheduled from June 11 to July 19, 2026, fans
-							worldwide are preparing for a month-long spectacle
-							that will redefine the landscape of international
-							football.
-						</p>
-						<p className='text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-8'>
-							The expanded format introduces new dynamics, with 48
-							teams competing in 80 matches across 12 iconic
-							stadiums. The opening match at Estadio Azteca in
-							Mexico City will see Mexico face South Africa,
-							setting the stage for a tournament filled with
-							unforgettable moments. The final, hosted at MetLife
-							Stadium in New Jersey, will crown the world’s best
-							team in front of over 82,000 spectators. Fans can
-							expect thrilling group stages, intense knockout
-							rounds, and a showcase of football’s rising stars
-							and legendary veterans.
-						</p>
-						<p className='text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-8'>
-							Ticketing for World Cup 2026 is a major focus, with
-							FIFA implementing a Random Selection Draw and a
-							regulated Resale Marketplace to ensure fair access.
-							Registration periods allow fans to enter lotteries
-							for popular matches, while the Resale Marketplace
-							opens in April 2026, providing opportunities to
-							purchase remaining tickets at capped prices. This
-							system aims to prevent scalping and make the
-							tournament accessible to fans from all backgrounds.
-						</p>
-						<p className='text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-8'>
-							The World Cup’s impact extends beyond the pitch.
-							Host cities across North America are preparing for a
-							surge in tourism, economic activity, and cultural
-							exchange. The tournament is expected to generate
-							billions in revenue, create thousands of jobs, and
-							foster lasting legacies in infrastructure and
-							community development. From the vibrant streets of
-							Mexico City to the bustling avenues of New York, the
-							World Cup will unite fans and nations in a shared
-							celebration of sport and humanity.
-						</p>
-						<p className='text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-8'>
-							For those seeking information, this hub provides
-							comprehensive details on tournament schedules,
-							ticket phases, stadiums, and frequently asked
-							questions. Whether you’re a seasoned football
-							enthusiast or a newcomer to the sport, the World Cup
-							2026 offers something for everyone. Stay updated
-							with live match hubs, ticket alerts, and expert
-							insights as the countdown to kickoff continues.
-						</p>
-						<p className='text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-8'>
-							The legacy of World Cup 2026 will be measured not
-							only in goals and trophies but in the connections
-							forged between people and cultures. As the world’s
-							eyes turn to North America, the tournament stands as
-							a beacon of hope, excitement, and possibility. Join
-							millions of fans in celebrating the beautiful game,
-							and experience the magic of football’s greatest
-							stage.
-						</p>
-						<p className='text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-8'>
-							Plan your journey, secure your tickets, and immerse
-							yourself in the World Cup 2026 experience. From the
-							opening ceremony to the final whistle, this
-							tournament promises to deliver memories that will
-							last a lifetime. Welcome to the future of
-							football—welcome to World Cup 2026.
-						</p>
+				{/* Article Section for Informational Content */}
+				<article className='max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16'>
+					<h2 className='text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-8 text-center'>
+						Ticketing & The World Cup 2026 Experience
+					</h2>
+					<p className='text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-6'>
+						Ticketing for World Cup 2026 is a major focus, with FIFA
+						implementing a Random Selection Draw and a regulated
+						Resale Marketplace to ensure fair access. Registration
+						periods allow fans to enter lotteries for popular
+						matches, while the Resale Marketplace opens in April
+						2026, providing opportunities to purchase remaining
+						tickets at capped prices. This system aims to prevent
+						scalping and make the tournament accessible to fans from
+						all backgrounds.
+					</p>
+					<p className='text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-6'>
+						The World Cup’s impact extends beyond the pitch. Host
+						cities across North America are preparing for a surge in
+						tourism, economic activity, and cultural exchange. The
+						tournament is expected to generate billions in revenue,
+						create thousands of jobs, and foster lasting legacies in
+						infrastructure and community development. From the
+						vibrant streets of Mexico City to the bustling avenues
+						of New York, the World Cup will unite fans and nations
+						in a shared celebration of sport and humanity.
+					</p>
+					<p className='text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-6'>
+						For those seeking information, this hub provides
+						comprehensive details on tournament schedules, ticket
+						phases, stadiums, and frequently asked questions.
+						Whether you’re a seasoned football enthusiast or a
+						newcomer to the sport, the World Cup 2026 offers
+						something for everyone. Stay updated with live match
+						hubs, ticket alerts, and expert insights as the
+						countdown to kickoff continues.
+					</p>
+					<p className='text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-6'>
+						The legacy of World Cup 2026 will be measured not only
+						in goals and trophies but in the connections forged
+						between people and cultures. As the world’s eyes turn to
+						North America, the tournament stands as a beacon of
+						hope, excitement, and possibility. Join millions of fans
+						in celebrating the beautiful game, and experience the
+						magic of football’s greatest stage.
+					</p>
+					<p className='text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed'>
+						Plan your journey, secure your tickets, and immerse
+						yourself in the World Cup 2026 experience. From the
+						opening ceremony to the final whistle, this tournament
+						promises to deliver memories that will last a lifetime.
+						Welcome to the future of football—welcome to World Cup
+						2026.
+					</p>
+				</article>
+
+				{/* Second AdSense Slot - After Informational Paragraphs, Before FAQ */}
+				<section className='w-full bg-white dark:bg-slate-950 py-6 sm:py-8 md:py-10'>
+					<div className='max-w-3xl mx-auto px-2 sm:px-6 lg:px-8'>
+						<div className='bg-slate-100 dark:bg-slate-900 border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-lg p-6 sm:p-10 text-center'>
+							<p className='text-slate-600 dark:text-slate-400 font-semibold'>
+								AdSense Placeholder
+							</p>
+						</div>
 					</div>
 				</section>
 
@@ -276,16 +258,7 @@ export default function Home() {
 					</div>
 				</section>
 
-				{/* AdSense Placeholders */}
-				<section className='w-full bg-white dark:bg-slate-950 py-8 sm:py-12 md:py-16'>
-					<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-						<div className='bg-slate-100 dark:bg-slate-900 border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-lg p-8 sm:p-12 text-center'>
-							<p className='text-slate-600 dark:text-slate-400 font-semibold'>
-								AdSense Placeholder - Sidebar Ad
-							</p>
-						</div>
-					</div>
-				</section>
+				{/* Removed Sidebar AdSense Placeholder for single slot layout */}
 
 				{/* Footer */}
 				<footer className='w-full bg-slate-900 dark:bg-slate-950 text-slate-300 py-8 sm:py-12 md:py-16 border-t border-slate-800'>
@@ -417,10 +390,8 @@ export default function Home() {
 							</div>
 						</div>
 						<div className='border-t border-slate-800 pt-8 text-center text-sm'>
-							<p>
-								&copy; 2026 FIFA World Cup. Official tournament
-								information and ticketing.
-							</p>
+							&copy; 2026 FIFA World Cup. Official tournament
+							information and ticketing.
 						</div>
 					</div>
 				</footer>

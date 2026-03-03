@@ -6,20 +6,9 @@ import React from 'react';
 import './globals.css';
 import 'next';
 
-declare global {
-  namespace NodeJS {
-    interface ProcessEnv {
-      NEXT_PUBLIC_BING_VERIFICATION?: string;
-    }
-  }
-}
-
 declare module 'next' {
-  interface Metadata {
-    verification?: {
-      google?: string;
-      bing?: string;
-    };
+  interface Verification {
+    bing?: string;
   }
 }
 
@@ -40,7 +29,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
     verification: {
         google: 'google5ece4f89518f4897.html',
-    } as any,
+        bing: '9EB8584660318EFB5DD5C9C06E7543BC',
+    },
     title: 'World Cup 2026 Countdown | Official Tickets & Information',
     description: 'Official World Cup 2026 countdown hub. Track ticket sales, venues, and more.',
     keywords: 'World Cup 2026, FIFA tickets 2026, football championship 2026',
